@@ -1,0 +1,22 @@
+<div>
+  <br />
+  <label>search: </label>
+  <input [(ngModel)]="selectedCountry" type="text" />
+
+  <table border="1" style="width: 100%">
+    <tr>
+      <th>name</th>
+      <th>nativeName</th>
+      <th>capital</th>
+      <th>population</th>
+      <th>flag</th>
+    </tr>
+    <tr *ngFor="let c of countries">
+      <td>{{ c.name }}</td>
+      <td>{{ c.nativeName }}</td>
+      <td>{{ c.capital }}</td>
+      <td>{{ c.population }}</td>
+      <td><img [src]="c.flag" width="50" height="50" /></td>
+    </tr>
+  </table>
+</div>
